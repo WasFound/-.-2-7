@@ -1,0 +1,20 @@
+#include <iostream>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	using std::cin;
+	using std::cout;
+	using std::endl;
+	const int int_duim_to_fut = 12;
+	int int_duim;
+	cout << "Введите рост в дюймах: ";
+	cin >> int_duim;
+	int fut = int_duim / int_duim_to_fut; //количество целых футов
+	int int_duim_ostatok = int_duim % int_duim_to_fut;
+	cout << "Рост в футах = " << fut << " футов" << ", " << int_duim_ostatok << " дюймов." << endl;
+	cin.get();
+	cin.get();
+	return 0;
+}
