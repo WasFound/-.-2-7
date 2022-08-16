@@ -1,0 +1,51 @@
+#include<iostream>
+#include<locale.h>
+int i_rrost(int, int);
+double d_BMI(double, double);
+const int int_fut_to_duim = 12;
+const double double_duim_v_metr=0.0254;
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	using std::cin;
+	using std::cout;
+	using std::endl;
+	int i_fut(0);
+	int i_duim(0);
+	int i_funt(0);
+	int i_duimduim(0);
+	double d_rost_v_metrah(0);
+	double d_ves_v_kg(0);
+	double d_koeff_BMI(0);
+	cout << "Введите рост в футах и дюймах и вес в фунтах" << endl;
+	cout << "Футы: ";
+	cin >> i_fut;
+	cout << "Дюймы: ";
+	cin >> i_duim;
+	cout << "Вес: ";
+	cin >> i_funt;
+	i_duimduim = i_rrost(i_fut, i_duim);
+	cout << "Рост в дюймах = " << i_duimduim << endl;
+	d_rost_v_metrah = i_duimduim * double_duim_v_metr;
+	cout << "Рост в метрах = " << d_rost_v_metrah << endl;
+	d_ves_v_kg = i_funt / 2.2;
+	cout << "Вес в килограммах = " << d_ves_v_kg;
+	d_koeff_BMI = d_BMI(d_ves_v_kg, d_rost_v_metrah);
+	cout << "Коэффициент BMI= " << d_koeff_BMI;
+	return 0;
+}
+int i_rrost(int f, int d)
+{
+	//const int int_fut_to_duim = 12;
+	int int_vsego_duimov;
+	//f = int_fut;
+	//d = int_duim;
+	int_vsego_duimov = (f * int_fut_to_duim) + d;
+	return int_vsego_duimov;
+}
+double d_BMI(double kg, double rost)
+{
+	double d_bmi(0);
+	d_bmi = kg / (rost * rost);
+	return d_bmi;
+}
