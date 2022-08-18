@@ -1,0 +1,20 @@
+#include<iostream>
+#include<locale.h>
+const int i_min = 60;
+const int i_hour = 3600;
+const int i_24_hour = 86400;
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	using std::cin;
+	using std::cout;
+	using std::endl;
+	long long ll_sec(0);
+	long long ll_24_hour(0);
+	long long ll_hour(0);
+	cout << "Введите число в секундах" << endl;
+	cin >> ll_sec;
+	
+	cout << ll_sec << " = " << ll_sec / i_24_hour << " дней, " << (ll_sec%i_24_hour)/i_hour << " часов, " << ((ll_sec%i_24_hour)%i_min) << " минут, " <<
+		ll_sec-(ll_sec/i_24_hour)- ((ll_sec % i_24_hour) / i_hour) - ((ll_sec % i_24_hour) % i_min) << " секунд.";
+	return(0);
