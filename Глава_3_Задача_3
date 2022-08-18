@@ -1,0 +1,26 @@
+#include<iostream>
+#include<locale.h>
+double d_itogo(0);
+const double cd_grad(1.0);
+const double cd_min = cd_grad / 60;
+const double cd_sec = cd_min / 60;
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	using std::cin;
+	using std::cout;
+	using std::endl;
+	cout << "Введите широту в градусах, минутах, секундах: " << endl;
+	int i_grad(0);
+	double d_min(0);
+	double d_sec(0);
+	cout << "Сначала введите градусы:";
+	cin >> i_grad;
+	cout << "Введите минуты:";
+	cin >> d_min;
+	cout << "Теперь секунды:";
+	cin >> d_sec;
+	d_itogo = i_grad+(d_min*cd_min)+(d_sec*cd_sec);
+	cout << i_grad << "Градусов, " << d_min << "минут, " << d_sec << "секунд = " << d_itogo << "градусов.";
+	return 0;
+}
