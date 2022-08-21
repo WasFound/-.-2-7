@@ -1,0 +1,22 @@
+#include<iostream>
+#include<locale.h>
+long long ll_all_people_of_earth(0);
+long long ll_all_people_of_russia(0);
+long double ld_proc(0);
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	using std::cin;
+	using std::cout;
+	using std::endl;
+	using std::ios_base;
+	//cout.setf(ios_base::fixed, ios_base::floatfield);
+	cout << "Введите количество людей на Земле ";
+	cin >> ll_all_people_of_earth;
+	cout << "Введите количество людей в России ";
+	cin >> ll_all_people_of_russia;
+	ld_proc = (ll_all_people_of_russia / ll_all_people_of_earth);// *100;
+	cout << "% жителей России от общемирового значения " << ld_proc;
+	cin.get();
+	return(0);
+}
