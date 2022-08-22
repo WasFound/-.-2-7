@@ -1,0 +1,17 @@
+#include<iostream>
+#include<locale.h>
+
+int main()
+{
+	using std::cin;
+	using std::cout;
+	using std::endl;
+	float f_miles(0);
+	float f_gallons(0);
+	setlocale(LC_ALL, "RU");
+	cout << "Введите количество миль, пройденных автомобилем: ";
+	cin >> f_miles;
+	cout << "Введите количество израсходованных галлонов бензина: ";
+	cin >> f_gallons;
+	cout << "Миль на галлон = " << f_miles / f_gallons;
+	return 0;
