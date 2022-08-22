@@ -1,0 +1,22 @@
+#include<iostream>
+#include<locale.h>
+double d_kilometers_to_miles(double, double);
+const double d_kilometer_to_miles=62.14;
+const double d_gall_to_liter = 3.875;
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	using std::cin;
+	using std::cout;
+	using std::endl;
+	double d_liters(0);
+	double d_kilometers(0);
+	cout << "Введите литры на 100 км." << endl;
+	cout << "Литры: ";
+	cin >> d_liters;
+	cout << "Километры: ";
+	cin >> d_kilometers;
+
+	return 0;
+}
+d_kilometers_to_miles(double,)
