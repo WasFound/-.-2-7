@@ -1,26 +1,32 @@
 #include<iostream>
 #include<locale.h>
-void _time(int, int);
+double d_kilometers_to_miles(int, double);
+double d_liters_to_gal(double, double);
+const double d_1_kilometer_in_miles=62.14/100;
+const double d_1_gall_in_liter = 3.875;
+const int i_kilometers(100);
 int main()
 {
 	setlocale(LC_ALL, "RU");
-	int hour;
-	int min;
-	using std::cout;
 	using std::cin;
+	using std::cout;
 	using std::endl;
-	cout << "Введите сколько часов: ";
-	cin >> hour;
-	cout << "Введите количество минут: ";
-	cin >> min;
-	cout << "Время: ";
-	_time(hour, min);
-	cin.get();
-	cin.get();
+	double d_liters(0);
+	cout << "Введите литры на 100 км." << endl;
+	cout << "Литры: ";
+	cin >> d_liters;
+	//cout << "Километры: ";
+	cout << d_liters << " литров/" << i_kilometers << " километров" << endl;
+	cout << d_kilometers_to_miles(i_kilometers, d_1_kilometer_in_miles) << " миль/" << d_liters_to_gal(d_liters, d_1_gall_in_liter) << " галлонов";
 	return 0;
 }
-void _time(int h, int m)
-{
-	using std::cout;
-	cout << h << ":" << m;
-}
+	double d_kilometers_to_miles(int kilo, double miles)
+	{
+		double d_kilo_to_miles = kilo * d_1_kilometer_in_miles;
+		return d_kilo_to_miles;
+	}
+	double d_liters_to_gal(double liters, double gal)
+	{
+		double d_lit_to_gal = liters / d_1_gall_in_liter;
+		return d_lit_to_gal;
+	}
