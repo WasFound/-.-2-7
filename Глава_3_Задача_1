@@ -9,7 +9,7 @@ int main()
 	using std::endl;
 	const int int_duim_to_fut = 12;
 	int int_duim;
-	cout << "Введите рост в дюймах: ";
+	cout << "Введите рост в дюймах:_\b";
 	cin >> int_duim;
 	int fut = int_duim / int_duim_to_fut; //количество целых футов
 	int int_duim_ostatok = int_duim % int_duim_to_fut;
