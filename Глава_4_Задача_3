@@ -23,5 +23,6 @@ int main()
 	
 	cout << "Here's the information in a single string: ";
 	cout << c_last_name << ", " << c_first_name;
+	cin.get();
 	return 0;
 }
