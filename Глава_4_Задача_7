@@ -11,11 +11,29 @@
 (или его методы) и cout.
 */
 #include<iostream>
+#include<cstring>
 
 int main()
 {
 	using namespace std;
-
+    struct pizza
+    {
+        string s_name;
+        int i_diameter;
+        double d_weight;
+    } analise_pizza;
+    
+    cout << "Enter manufacturer name: ";
+    getline(cin, analise_pizza.s_name);
+    cout << "Enter diameter: ";
+    cin >> analise_pizza.i_diameter;
+    cout << "Enter weight: ";
+    cin >> analise_pizza.d_weight;
+    cout << "\n";
+    
+    cout << "Manufacturer name: " << analise_pizza.s_name << "\n";
+    cout << "Diameter: " << analise_pizza.i_diameter << "\n";
+    cout << "Weight: " << analise_pizza.d_weight << "\n";
 	
 	cin.get();
 	return 0;
