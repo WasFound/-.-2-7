@@ -15,11 +15,6 @@ int main()
 	} snack{"Mocha Munch", 2.3, 350}, snack1{"Kuku-Ruku", 3.8, 320}, snack2{"Wagon Weels", 2.8, 340};
 	CandyBar massiv[3]{snack, snack1, snack2};
 	
-	/*cout << "the contents of the \"snack\" variable" << "\n";
-	cout << "Name: " << "\"" << snack.c_name << "\"" << "\n";
-	cout << "Weigth: " << snack.d_weight << "\n";
-	cout << "Calories: " << snack.i_calories << "\n";*/
-	
 	cout << "the contents of the massiv[0] variable" << "\n";
 	cout << "Name: " << "\"" << snack.c_name << "\"" << "\n";
 	cout << "Weigth: " << snack.d_weight << "\n";
