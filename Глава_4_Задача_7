@@ -11,7 +11,7 @@
 (или его методы) и cout.
 */
 #include<iostream>
-#include<cstring>
+#include<string>
 
 int main()
 {
