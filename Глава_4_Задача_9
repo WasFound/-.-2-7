@@ -6,41 +6,55 @@
 Выполните упражнение 6, но вместо объявления массива из трех структур 
 CandyBar используйте операцию new для динамического размещения массива.*/
 #include<iostream>
-
+#include<string>
 int main()
 {
 	using namespace std;
 	struct CandyBar
 	{
-		string c_name[80];
+		char c_name[80];
 		double d_weight;
 		int i_calories;
 	};
 	
-	CandyBar* snack = new CandyBar; //{ "Mocha Munch", 2.3, 350 };
-	CandyBar* snack1 = new CandyBar; //{ "Kuku-Ruku", 3.8, 320 };
-	CandyBar* snack2 = new CandyBar; //{ "Wagon Weels", 2.8, 340 };
+	CandyBar* all_snack = new CandyBar[3];
+	/* { "Mocha Munch", 2.3, 350 };
+	{ "Kuku-Ruku", 3.8, 320 };
+	{ "Wagon Weels", 2.8, 340 };*/
 	
-	*snack->c_name = "Mocha Munch";
-	snack->d_weight = 2.3;
-	cout << "the contents of the massiv[0] variable" << "\n";
-	cout << "Name: " << "\"" << * snack->c_name << "\"" << "\n";
-	cout << "Weigth: " << snack->d_weight << "\n";
-	/*cout << "Calories: " << *snack->i_calories << "\n" << "\n";
+	cout << "Enter name of snack1: " << "\n";
+	cin >> all_snack[0].c_name;
+	cout << "Enter weigth: " << "\n";
+	cin >> all_snack[0].d_weight;
+	cout << "Enter calories: " << "\n";
+	cin >> all_snack[0].i_calories;
+	cout << endl;
 
-	cout << "the contents of the massiv[1] variable" << "\n";
-	cout << "Name: " << "\"" << *snack1->c_name << "\"" << "\n";
-	cout << "Weigth: " << snack1.d_weight << "\n";
-	cout << "Calories: " << snack1.i_calories << "\n" << "\n";
+	cout << "Enter name of snack2: " << "\n";
+	cin >> all_snack[1].c_name;
+	cout << "Enter weigth: " << "\n";
+	cin >> all_snack[1].d_weight;
+	cout << "Enter calories: " << "\n";
+	cin >> all_snack[1].i_calories;
+	cout << endl;
 
-	cout << "the contents of the massiv[2] variable" << "\n";
-	cout << "Name: " << "\"" << *snack2->c_name << "\"" << "\n";
-	cout << "Weigth: " << snack2.d_weight << "\n";
-	cout << "Calories: " << snack2.i_calories << "\n" << "\n";*/
+	cout << "Enter name of cnack3: " << "\n";
+	cin >> all_snack[2].c_name;
+	cout << "Enter weigth: " << "\n";
+	cin >> all_snack[2].d_weight;
+	cout << "Enter calories: " << "\n";
+	cin >> all_snack[2].i_calories;
+	cout << endl;
 
-	delete snack;
-	//delete snack1;
-	//delete snack2;
+	cout << "Name snack1: " << all_snack[0].c_name << "\, " << "Weight snack1: " << all_snack[0].d_weight << "\, " 
+		 << "Calories snack1: " << all_snack[0].i_calories << endl;
+	cout << "Name snack1: " << all_snack[1].c_name << "\, " << "Weight snack1: " << all_snack[1].d_weight << "\, " 
+		 << "Calories snack1: " << all_snack[1].i_calories << endl;
+	cout << "Name snack1: " << all_snack[2].c_name << "\, " << "Weight snack1: " << all_snack[2].d_weight << "\, " 
+		 << "Calories snack1: " << all_snack[2].i_calories << endl;
+
+
+	delete all_snack;
 	cin.get();
 	return 0;
 }
