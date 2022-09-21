@@ -62,7 +62,7 @@ int main()
 {
 	//5 Вопрос.
 	float ideas = chuck[1];
-	cout << ideas << "\n";
+	cout << "float[1] = " << ideas << "\n";
 	//6 Вопрос.
 	char mac[15] = "cheesburger";
 	//7 Вопрос.
@@ -79,8 +79,14 @@ int main()
 	//10 Вопрос.
 	enum Response { Yes = 1, No = 0, Maybe = 2};
 	//11 Вопрос.
-	
+	double ted = 99.01;
+	double * p_ted;
+	p_ted = &ted;
+	cout << "TED = " << *p_ted << endl;
+	//12 Вопрос.
+	float treacle[10] = { 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 10.10 };
+
 	//14 Вопрос.
-	cout << (int*) "Home of the jolly bytes";
+	cout << "14 questions = " << (int*)"Home of the jolly bytes";
 	return 0;
 }
