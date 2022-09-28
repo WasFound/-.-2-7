@@ -29,7 +29,7 @@ int main()
 	{
 		{
 			daphne_profit = daphne_profit + (I_SUMM * I_DAPHNE_PERCENT);
-			kleo_profit = kleo_profit + (compount_interest / 100);
+			kleo_profit = kleo_profit + (kleo_profit / 100 * compount_interest);
 			cout << "Daphne profit: \t" << daphne_profit << "\t" << "Kleo profit : \t" << kleo_profit << "\t" << endl;
 			i++;
 		}
