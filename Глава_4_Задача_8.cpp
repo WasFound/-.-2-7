@@ -35,8 +35,6 @@ int main()
     (cin >> analise_pizza->i_diameter).get();
     cout << "Enter manufacturer name: ";
     getline(cin, analise_pizza->s_name);
-    //cout << "Enter diameter: ";
-    //cin >> analise_pizza->i_diameter;
     cout << "Enter weight: ";
     cin >> analise_pizza->d_weight;
     cout << "\n";
