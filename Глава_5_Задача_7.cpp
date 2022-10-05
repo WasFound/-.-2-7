@@ -46,10 +46,8 @@ int main()
 	cout << "\nYour vehicle configuration:\n";
 	for (int i = 0; i < i_how_many; i++)
 	{
-		cout << pcar[i].i_year_of_manufacturing << " ";
-		cout << pcar[i].s_manufacturer << endl;
+		cout << pcar[i].i_year_of_manufacturing << " " << pcar[i].s_manufacturer << endl;
 	}
-
-	delete []pcar;
+		delete [] pcar;
 	return 0;
 }
