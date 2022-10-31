@@ -11,10 +11,20 @@ envy finagle geometry done for sure
 */
 #include<iostream>
 #include<cstring>
-
+using namespace std;
 
 int main()
 {
-
+	const int i_ALL = 15;
+	char all[i_ALL];
+	int i = 0;
+	cout << "Enter words (for end, enter word \"done\"): \n";
+	cin >> all;
+	while (strcmp(all, "done"))
+	{
+		cin >> all;
+		i++;
+	}
+	cout << "total words: " << i;
 	return 0;
 }
